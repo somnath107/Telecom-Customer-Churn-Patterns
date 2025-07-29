@@ -1,96 +1,106 @@
-# 📊 Customer Churn Analysis Based on Payment Method
+# 📊 Telecom Customer Churn Analysis
 
-## 📌 Executive Summary
-
-This report explores the relationship between customer churn and the **method of payment**, with the objective of identifying patterns that can help reduce attrition. Based on exploratory data analysis (EDA), we observed a significant disparity in churn rates across payment methods.
-
-- **Electronic Check** users exhibit the highest churn rate at **45.8%**.
-- In contrast, **automatic payment** users (via Bank Transfers or Credit Cards) have much lower churn rates, around **15–16%**.
-
-These insights indicate that **payment behavior is a strong predictor of churn** and provide an actionable lever for customer retention. Nudging customers toward automatic billing methods can enhance **Customer Lifetime Value (CLTV)** and ease the pressure on customer acquisition costs.
+This project explores customer churn behavior in a telecom company through in-depth Exploratory Data Analysis (EDA). The primary focus is to uncover insights that can inform strategies to retain customers and improve long-term profitability, particularly by analyzing the influence of **payment methods** on customer churn.
 
 ---
 
-## 🎯 Key Highlights
+## 📌 Objective
 
-- Churn rates **vary widely by payment method**.
-- Users paying manually (Electronic/Mailed Check) are at **higher churn risk**.
-- **Automatic billing users are significantly more loyal** and stickier.
+To analyze customer churn patterns with an emphasis on identifying relationships between churn and various customer features — especially the **method of payment** — in order to provide actionable recommendations for reducing churn and improving customer lifetime value (CLTV).
 
 ---
 
-## 🔍 Key Findings
+## 📁 Dataset Overview
 
-An in-depth analysis of customer data reveals:
+- The dataset consists of 7043 telecom customer records.
+- Each record includes:
+  - **Demographics** (e.g., gender, senior citizen)
+  - **Service subscription details** (e.g., internet service, streaming)
+  - **Payment information** (e.g., payment method, monthly charges)
+  - **Customer churn status**
 
-- **Electronic Check**: Highest churn rate at **45.8%** (1,095 churned out of 2,389).
-- **Mailed Check**: Moderate churn rate at **18.7%**.
-- **Bank Transfer (Automatic)**: Low churn rate at **16.7%**.
-- **Credit Card (Automatic)**: Lowest churn rate at **15.2%**.
+---
 
-### Key Insights
+## 🔍 Exploratory Data Analysis
 
-- Churn is **3× higher** for Electronic Check users compared to Credit Card users.
-- Manual payment methods introduce more friction and lead to a **higher dropout risk**.
-- Automated billing supports **greater customer stickiness** and recurring revenue.
+The EDA includes:
+
+- **Data cleaning**: Handling missing values and encoding categorical data.
+- **Univariate analysis**: Understanding distributions (e.g., churn, senior citizen).
+- **Bivariate analysis**: Comparing churn across key features.
+- **Correlation study**: Identifying numerical features related to churn.
+- **Visualization**: Count plots, bar graphs, and box plots for insights.
+
+---
+
+## 📌 Key Findings
+
+### 1. **Churn Rate by Payment Method**
+- **Electronic Check** users exhibit the highest churn rate: **45.8%**
+- **Mailed Check** churn rate: **18.7%**
+- **Bank Transfer (Auto)** churn rate: **16.7%**
+- **Credit Card (Auto)** churn rate: **15.2%**
+
+➡️ **Insight**: Customers using **automatic payments** are significantly more loyal.
+
+---
+
+### 2. **Behavioral Insight**
+- Manual payments (electronic/mailed checks) are more prone to user error, payment delays, and service disruptions — leading to higher churn.
+- Automated payments reduce friction, increase convenience, and promote continuity.
 
 ---
 
 ## 💡 Strategic Implications
 
-Churn reduction directly impacts key business metrics like **Monthly Recurring Revenue (MRR)**, **Customer Acquisition Cost (CAC)**, and **profitability**.
-
-What makes this insight actionable:
-
-- **Payment method is a controllable factor**—unlike demographics or location.
-- Businesses can proactively **influence payment behavior** to drive better retention.
-
-### Strategic Takeaways
-
-- Reducing churn improves **LTV/CAC ratios** significantly.
-- **Influencing payment habits** is easier than altering demographic risk factors.
-- A **Payment Optimization Program** offers high ROI on retention and growth.
-
----
-
-## 🔍 Root Cause Hypotheses
-
-Why do manual payment users churn more?
-
-1. **Friction in Process**: Manual payments require effort each cycle—leading to lapses.
-2. **Payment Failures**: Increased likelihood of missed or delayed payments.
-3. **Demographics**: Manual users may be less digitally savvy or older.
-4. **Trust Issues**: Reluctance to share banking/card details online.
-5. **Awareness Gaps**: Users may not know auto-pay options exist.
+- **Churn Reduction**: Transitioning manual payers to automatic billing can significantly reduce churn.
+- **Cost Optimization**: Lower churn = improved LTV:CAC ratio = reduced pressure on marketing spend.
+- **Controllable Lever**: Unlike immutable factors like age, payment method is **changeable** with the right nudge.
 
 ---
 
 ## ✅ Recommendations
 
-### 5.1 Encourage Transition to Automatic Payments
+### 1. Transition to Auto-Pay
 
-- 💸 **Offer Incentives**: Discounts or loyalty rewards for enabling auto-pay.
-- 📣 **Highlight Benefits**: Showcase fewer late fees, uninterrupted services.
-- 🔁 **Use Onboarding Prompts**: Push auto-pay setup during signup/payment process.
+- Offer small incentives for enabling auto-pay (discounts, loyalty points).
+- Promote uninterrupted service and reduced late fees as benefits.
+- Include a **one-click auto-pay setup** during onboarding.
 
-### 5.2 Launch Targeted Retention Campaigns
+### 2. Targeted Retention Campaigns
 
-- 📨 **Personalized Messaging**: Tailored emails, SMS, or in-app nudges.
-- 🤝 **Dedicated Customer Support**: Help hesitant users through setup.
-- 🧠 **Behavioral Nudges**: E.g., “90% of customers use Auto-Pay” messages.
+- Focus on **Electronic Check** and **Mailed Check** users.
+- Use personalized emails/in-app messages to encourage auto-pay adoption.
+- Leverage behavioral nudges like:
+  > “90% of customers like you use Auto-Pay for peace of mind.”
 
-### 5.3 Improve UX and Awareness
+### 3. Build Trust and Awareness
 
-- 🧾 **One-Click Auto-Pay Setup**: Reduce complexity in payment preferences UI.
-- 🔐 **Trust Signals**: Use secure badges, encryption symbols.
-- 📚 **Education Campaigns**: Make users aware of the benefits and ease of auto-pay.
+- Add trust signals (🔒 Bank-level security, ✅ Most popular option).
+- Educate customers through tutorials, tooltips, and support FAQs.
+- Make the switch process as seamless and frictionless as possible.
 
 ---
 
-## 📌 Summary of Recommendations
+## 🔎 Root Cause Hypotheses
 
-- ✅ Prioritize the **migration to automatic billing systems**.
-- 🧠 Target **communication and support** to high-risk churn segments.
-- 🖥️ Simplify and optimize the **digital experience** around payments.
+- **Friction**: Manual billing requires more effort, leading to missed payments.
+- **Tech comfort**: Older or less digital-savvy users may avoid auto-pay.
+- **Awareness**: Some users may not know auto-pay is available or safe.
+- **Trust**: Reluctance to save financial data online.
+- **Satisfaction**: Dissatisfied customers delay or avoid paying.
+
+---
+
+## 📈 Conclusion
+
+This analysis shows a **clear, actionable link** between payment method and churn risk. By addressing controllable user behaviors — especially how they pay — telecom companies can dramatically reduce churn, improve unit economics, and enhance customer satisfaction.
+
+---
+
+## 🛠 Tools Used
+
+- **Python**: Data processing and visua
+
 
 
